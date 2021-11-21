@@ -52,6 +52,8 @@ module.exports = {
       nordFooter: "75px",
       nordInputL: "16px",
       nordBaseX: "200px",
+      nordHero1Y: "120px",
+      nordHero2Y: "230px",
     },
     lineHeight: {
       nordHeight: "64px",

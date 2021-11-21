@@ -11,11 +11,18 @@
     Frequently asked questions
   </h3>
   <div>
-    <cdk-accordion class="example-accordion">
+    <cdk-accordion class="accordion">
       <cdk-accordion-item
-        *ngFor="let item of items; let index = index"
+        *ngFor="let item of listOfText; let index = index; first as isFirst"
+        [expanded]="isFirst"
         #accordionItem="cdkAccordionItem"
-        class="example-accordion-item transition-all"
+        class="
+          accordion-item
+          transition-all
+          mb-3
+          bg-nordWhite-base
+          rounded-nordSmall
+        "
         role="button"
         tabindex="0"
         [attr.id]="'accordion-header-' + index"
@@ -23,25 +30,41 @@
         [attr.aria-controls]="'accordion-body-' + index"
       >
         <div
-          class="example-accordion-item-header"
+          class="
+            accordion-item-header
+            font-bold
+            text-nordSmall
+            leading-nordTable
+            text-nordGrey-dark
+          "
           (click)="accordionItem.toggle()"
         >
-          {{ item }}
-          <span class="example-accordion-item-description">
-            Click to {{ accordionItem.expanded ? "close" : "open" }}
+          {{ item.heading }}
+          <span class="accordion-item-description text-nordGrey-darkest">
+            <i
+              class="fas fa-chevron-{{
+                accordionItem.expanded ? 'up' : 'down'
+              }}"
+            ></i>
           </span>
         </div>
         <div
-          class="example-accordion-item-body"
+          class="
+            accordion-item-body
+            text-nordGrey-dark text-nordSmall
+            leading-nordTable
+          "
           role="region"
           [style.display]="accordionItem.expanded ? '' : 'none'"
           [attr.id]="'accordion-body-' + index"
           [attr.aria-labelledby]="'accordion-header-' + index"
         >
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis
-          excepturi incidunt ipsum deleniti labore, tempore non nam doloribus
-          blanditiis veritatis illo autem iure aliquid ullam rem tenetur
-          deserunt velit culpa?
+          <p class="mb-2">
+            {{ item.text1 }}
+          </p>
+          <p>
+            {{ item.text2 }}
+          </p>
         </div>
       </cdk-accordion-item>
     </cdk-accordion>

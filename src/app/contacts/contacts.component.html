@@ -12,18 +12,18 @@
     Get NordPass for business
   </h2>
   <div class="flex mt-16 justify-around items-center">
-    <div class="">
+    <div>
       <img
-        class="h-auto"
+        class="h-auto w-full"
         src="../../assets/img/np-form-image.png"
         alt="Image of open computer, opened NordPass application"
       />
     </div>
-    <form>
+    <form (ngSubmit)="onSubmit(form)" #form="ngForm">
       <div class="text-nordSmall leading-nordSelect text-nordGrey-darkest mb-4">
         Fill out your details, and we will get back to you shortly:
       </div>
-      <div>
+      <div class="mb-6">
         <input
           type="text"
           placeholder="Name"
@@ -32,7 +32,6 @@
             box-border
             border-defaultBorderColor
             rounded-nordSmall
-            mb-6
             text-nordGrey-darkest
             font-medium
             text-nordSsmall
@@ -40,12 +39,60 @@
             pl-nordInputL
             w-nordInput
             h-nordInput
+            mb-1
             transition
-            focus:outline-none focus:ring focus:border-blue-300
+            focus:outline-none focus:ring focus:ring-nordTeal-base
           "
+          ngModel
+          minlength="3"
+          required
+          #name="ngModel"
+          name="name"
         />
+        <div *ngIf="name.invalid && (name.touched || name.dirty)">
+          <div
+            class="flex items-center mb-6 text-nordRed-base"
+            *ngIf="name.errors?.['required']"
+          >
+            <span class="mr-2">
+              <svg
+                width="16"
+                height="14"
+                viewBox="0 0 16 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15.2159 12.529L8.88189 0.654012C8.50589 -0.0519882 7.49389 -0.0519882 7.11689 0.654012L0.783885 12.529C0.428885 13.195 0.911885 14 1.66689 14H14.3339C15.0879 14 15.5709 13.195 15.2159 12.529ZM7.99989 12C7.44789 12 6.99989 11.552 6.99989 11C6.99989 10.448 7.44789 10 7.99989 10C8.55189 10 8.99989 10.448 8.99989 11C8.99989 11.552 8.55189 12 7.99989 12ZM8.99989 9.00001H6.99989V5.00001H8.99989V9.00001Z"
+                  fill="#F64F64"
+                />
+              </svg>
+            </span>
+            <span>Name field cannot be empty!</span>
+          </div>
+          <div
+            class="flex items-center mb-6 text-nordRed-base"
+            *ngIf="name.errors?.['minlength']"
+          >
+            <span class="mr-2">
+              <svg
+                width="16"
+                height="14"
+                viewBox="0 0 16 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15.2159 12.529L8.88189 0.654012C8.50589 -0.0519882 7.49389 -0.0519882 7.11689 0.654012L0.783885 12.529C0.428885 13.195 0.911885 14 1.66689 14H14.3339C15.0879 14 15.5709 13.195 15.2159 12.529ZM7.99989 12C7.44789 12 6.99989 11.552 6.99989 11C6.99989 10.448 7.44789 10 7.99989 10C8.55189 10 8.99989 10.448 8.99989 11C8.99989 11.552 8.55189 12 7.99989 12ZM8.99989 9.00001H6.99989V5.00001H8.99989V9.00001Z"
+                  fill="#F64F64"
+                />
+              </svg>
+            </span>
+            <span>Name field cannot shorter than 3 letters!</span>
+          </div>
+        </div>
       </div>
-      <div>
+      <div class="mb-6">
         <input
           type="text"
           placeholder="Email"
@@ -54,7 +101,7 @@
             box-border
             border-defaultBorderColor
             rounded-nordSmall
-            mb-3
+            mb-1
             text-nordGrey-darkest
             font-medium
             text-nordSsmall
@@ -63,42 +110,128 @@
             w-nordInput
             h-nordInput
             transition
-            focus:outline-none focus:ring focus:border-blue-300
+            focus:outline-none focus:ring focus:ring-nordTeal-base
           "
+          ngModel
+          minlength="5"
+          required
+          #email="ngModel"
+          name="email"
         />
+        <div *ngIf="email.invalid && (email.touched || email.dirty)">
+          <div
+            class="flex items-center mb-6 text-nordRed-base"
+            *ngIf="email.errors?.['required']"
+          >
+            <span class="mr-2">
+              <svg
+                width="16"
+                height="14"
+                viewBox="0 0 16 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15.2159 12.529L8.88189 0.654012C8.50589 -0.0519882 7.49389 -0.0519882 7.11689 0.654012L0.783885 12.529C0.428885 13.195 0.911885 14 1.66689 14H14.3339C15.0879 14 15.5709 13.195 15.2159 12.529ZM7.99989 12C7.44789 12 6.99989 11.552 6.99989 11C6.99989 10.448 7.44789 10 7.99989 10C8.55189 10 8.99989 10.448 8.99989 11C8.99989 11.552 8.55189 12 7.99989 12ZM8.99989 9.00001H6.99989V5.00001H8.99989V9.00001Z"
+                  fill="#F64F64"
+                />
+              </svg>
+            </span>
+            <span>Email address cannot be empty!</span>
+          </div>
+          <div
+            class="flex items-center mb-6 text-nordRed-base"
+            *ngIf="email.errors?.['minlength']"
+          >
+            <span class="mr-2">
+              <svg
+                width="16"
+                height="14"
+                viewBox="0 0 16 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15.2159 12.529L8.88189 0.654012C8.50589 -0.0519882 7.49389 -0.0519882 7.11689 0.654012L0.783885 12.529C0.428885 13.195 0.911885 14 1.66689 14H14.3339C15.0879 14 15.5709 13.195 15.2159 12.529ZM7.99989 12C7.44789 12 6.99989 11.552 6.99989 11C6.99989 10.448 7.44789 10 7.99989 10C8.55189 10 8.99989 10.448 8.99989 11C8.99989 11.552 8.55189 12 7.99989 12ZM8.99989 9.00001H6.99989V5.00001H8.99989V9.00001Z"
+                  fill="#F64F64"
+                />
+              </svg>
+            </span>
+            <span>Email address cannot shorter than 5 symbols!</span>
+          </div>
+        </div>
       </div>
-      <div class="flex items-center mb-6 text-nordRed-base hidden">
-        <span>
-          <img
-            class="stroke-current text-nordRed-base"
-            src="../../assets/img/warning.svg"
-            alt="Exclamation point in triangle"
-          />
-        </span>
-        <span>Email address cannot be empty</span>
+      <div class="mb-3">
+        <textarea
+          name=""
+          id=""
+          placeholder="Note"
+          class="
+            border
+            box-border
+            border-defaultBorderColor
+            rounded-nordSmall
+            mb-1
+            text-nordGrey-darkest
+            font-medium
+            text-nordSsmall
+            leading-nordInput
+            pl-nordInputL
+            w-nordInput
+            h-nordTextArea
+            pt-nordSButtonY
+            transition
+            focus:outline-none focus:ring focus:ring-nordTeal-base
+          "
+          required
+          ngModel
+          minlength="15"
+          #text="ngModel"
+          name="text"
+        ></textarea>
+        <div *ngIf="text.invalid && (text.touched || text.dirty)">
+          <div
+            class="flex items-center mb-6 text-nordRed-base"
+            *ngIf="text.errors?.['required']"
+          >
+            <span class="mr-2">
+              <svg
+                width="16"
+                height="14"
+                viewBox="0 0 16 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15.2159 12.529L8.88189 0.654012C8.50589 -0.0519882 7.49389 -0.0519882 7.11689 0.654012L0.783885 12.529C0.428885 13.195 0.911885 14 1.66689 14H14.3339C15.0879 14 15.5709 13.195 15.2159 12.529ZM7.99989 12C7.44789 12 6.99989 11.552 6.99989 11C6.99989 10.448 7.44789 10 7.99989 10C8.55189 10 8.99989 10.448 8.99989 11C8.99989 11.552 8.55189 12 7.99989 12ZM8.99989 9.00001H6.99989V5.00001H8.99989V9.00001Z"
+                  fill="#F64F64"
+                />
+              </svg>
+            </span>
+            <span>Note field cannot be empty!</span>
+          </div>
+          <div
+            class="flex items-center mb-6 text-nordRed-base"
+            *ngIf="text.errors?.['minlength']"
+          >
+            <span class="mr-2">
+              <svg
+                width="16"
+                height="14"
+                viewBox="0 0 16 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15.2159 12.529L8.88189 0.654012C8.50589 -0.0519882 7.49389 -0.0519882 7.11689 0.654012L0.783885 12.529C0.428885 13.195 0.911885 14 1.66689 14H14.3339C15.0879 14 15.5709 13.195 15.2159 12.529ZM7.99989 12C7.44789 12 6.99989 11.552 6.99989 11C6.99989 10.448 7.44789 10 7.99989 10C8.55189 10 8.99989 10.448 8.99989 11C8.99989 11.552 8.55189 12 7.99989 12ZM8.99989 9.00001H6.99989V5.00001H8.99989V9.00001Z"
+                  fill="#F64F64"
+                />
+              </svg>
+            </span>
+            <span>Note field cannot be shorter than 15 letters!</span>
+          </div>
+        </div>
       </div>
-      <textarea
-        name=""
-        id=""
-        placeholder="Note"
-        class="
-          border
-          box-border
-          border-defaultBorderColor
-          rounded-nordSmall
-          mb-3
-          text-nordGrey-darkest
-          font-medium
-          text-nordSsmall
-          leading-nordInput
-          pl-nordInputL
-          w-nordInput
-          h-nordTextArea
-          pt-nordSButtonY
-          transition
-          focus:outline-none focus:ring focus:border-blue-300
-        "
-      ></textarea>
       <div
         class="
           text-nordBlack-lighter
@@ -110,7 +243,11 @@
         "
       >
         This information will be used by NordPass to respond to your inquiry as
-        provided in our<a href="/" class="ml-1 underline">Privacy Policy</a>.
+        provided in our<a
+          href="/"
+          class="ml-1 underline hover:text-nordTeal-base transition"
+          >Privacy Policy</a
+        >.
       </div>
       <button
         class="
@@ -123,7 +260,11 @@
           text-center text-base
           leading-nordLButton
           mt-6
+          hover:text-nordTeal-base hover:bg-nordGrey-dark
+          transition
         "
+        type="submit"
+        [disabled]="form.invalid"
       >
         Get started
       </button>

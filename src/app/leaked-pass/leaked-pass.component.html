@@ -18,8 +18,6 @@
         </th>
         <th>
           <select
-            name=""
-            id="sort"
             class="
               border
               box-border
@@ -31,45 +29,50 @@
               text-currentBackground
               leading-nordSelect
             "
+            #sortType
+            (change)="ngOnChanges(sortType.value)"
           >
-            <option value="">Count</option>
+            <option value="count">Count</option>
+            <option value="abc">ABC</option>
           </select>
         </th>
       </tr>
       <hr class="mt-6 text-nordGrey-light" />
-      <tr class="flex justify-between items-center my-5">
-        <td>
-          <span
+      <div *ngFor="let item of leakedPassData; let i = index">
+        <tr class="flex justify-between items-center my-6">
+          <td>
+            <span
+              class="
+                list-decimal list-inside
+                text-nordGrey-dark
+                leading-nordSelect
+                text-nordSmall
+              "
+              >{{ i + 1 }}.</span
+            >
+            <span
+              class="
+                leading-nordTable
+                text-nordSmall
+                font-bold
+                ml-7
+                text-nordGrey-dark
+              "
+              >{{ item.value }}</span
+            >
+          </td>
+          <td
             class="
-              list-decimal list-inside
-              text-nordGrey-dark
+              text-nordSmall
               leading-nordSelect
-              text-nordSmall
+              text-right text-nordGrey-darkest
             "
-            >1.</span
           >
-          <span
-            class="
-              leading-nordTable
-              text-nordSmall
-              font-bold
-              ml-7
-              text-nordGrey-dark
-            "
-            >Random</span
-          >
-        </td>
-        <td
-          class="
-            text-nordSmall
-            leading-nordSelect
-            text-right text-nordGrey-darkest
-          "
-        >
-          Random
-        </td>
-      </tr>
-      <hr class="text-nordGrey-light" />
+            {{ item.count }}
+          </td>
+        </tr>
+        <hr class="text-nordGrey-light" />
+      </div>
     </table>
   </div>
   <div class="flex items-center justify-center">
@@ -83,8 +86,10 @@
         font-bold
         text-center
         mt-11
+        hover:text-nordTeal-base hover:bg-nordGrey-dark
         transition
       "
+      (click)="showAll()"
     >
       Show all (50)
     </button>

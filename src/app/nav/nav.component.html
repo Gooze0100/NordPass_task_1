@@ -1,46 +1,89 @@
-<div class="container px-nordBaseX py-nordInputL">
-  <div class="flex justify-between items-center">
-    <div class="flex items-center">
-      <span>
-        <svg
-          width="34.4"
-          height="27.35"
-          viewBox="0 0 35 29"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M3.27391 28.2353C1.21453 25.394 0 21.898 0 18.1178C0 8.59891 7.70106 0.882324 17.2008 0.882324C26.7005 0.882324 34.4016 8.59891 34.4016 18.1178C34.4016 21.898 33.1871 25.3939 31.1277 28.2352L22.8662 14.7924L22.0684 16.1421L22.8778 19.8959L17.2008 10.163L13.689 16.1043L14.5066 19.8959L11.5308 14.8001L3.27391 28.2353Z"
-            fill="#43A5A1"
-          />
-        </svg>
-      </span>
-      <span class="ml-1">
-        <span class="font-bold text-nordXSmall">Nord</span>
-        <span class="text-nordTeal-base font-bold text-nordXSmall">Pass</span>
-      </span>
-    </div>
+<div
+  class="
+    container
+    md:px-nordBaseX
+    sm:px-nordSButtonX
+    py-nordInputL
+    bg-nordTeal-lightest
+    fixed
+    top-0
+    max-w-full
+    transition-all
+    navigation
+    sm:pl-nordInputL sm:left-0 sm:right-0
+  "
+>
+  <div class="sm:flex justify-between items-center flex-wrap">
+    <a href="https://nordpass.com/">
+      <div class="flex items-center">
+        <span>
+          <svg
+            width="34.4"
+            height="27.35"
+            viewBox="0 0 35 29"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M3.27391 28.2353C1.21453 25.394 0 21.898 0 18.1178C0 8.59891 7.70106 0.882324 17.2008 0.882324C26.7005 0.882324 34.4016 8.59891 34.4016 18.1178C34.4016 21.898 33.1871 25.3939 31.1277 28.2352L22.8662 14.7924L22.0684 16.1421L22.8778 19.8959L17.2008 10.163L13.689 16.1043L14.5066 19.8959L11.5308 14.8001L3.27391 28.2353Z"
+              fill="#43A5A1"
+            />
+          </svg>
+        </span>
+        <span class="ml-1">
+          <span class="font-bold text-nordXSmall">Nord</span>
+          <span class="text-nordTeal-base font-bold text-nordXSmall">Pass</span>
+        </span>
+      </div>
+    </a>
     <nav>
-      <ul class="flex justify-between items-center text-sm text-nordBlack-base">
+      <ul
+        class="
+          sm:flex
+          justify-between
+          items-center
+          text-sm text-nordBlack-base
+          flex-wrap
+        "
+      >
         <li class="leading-6 mr-6">
-          <a href="" class="font-medium">Features</a>
+          <a href="" class="font-medium hover:text-nordTeal-base transition"
+            >Features</a
+          >
         </li>
         <li class="leading-6 mr-6">
-          <a href="" class="font-medium">Pricing</a>
+          <a href="" class="font-medium hover:text-nordTeal-base transition"
+            >Pricing</a
+          >
         </li>
         <li class="leading-6 mr-6">
-          <a href="" class="font-medium">Apps</a>
+          <a href="" class="font-medium hover:text-nordTeal-base transition"
+            >Apps</a
+          >
         </li>
         <li class="leading-6 mr-6">
-          <a href="" class="font-medium">Blog</a>
+          <a href="" class="font-medium hover:text-nordTeal-base transition"
+            >Blog</a
+          >
         </li>
         <li class="leading-6 mr-6">
-          <a href="" class="font-medium">Help</a>
+          <a href="" class="font-medium hover:text-nordTeal-base transition"
+            >Help</a
+          >
         </li>
         <li class="leading-6 mr-6">
-          <a href="" class="text-nordTeal-base font-medium">My Account</a>
+          <a
+            href=""
+            class="
+              text-nordTeal-base
+              font-medium
+              hover:text-nordBlack-base
+              transition
+            "
+            >My Account</a
+          >
         </li>
         <li>
           <button
@@ -54,6 +97,8 @@
               text-xs
               leading-5
               text-center
+              hover:text-nordTeal-base hover:bg-nordGrey-dark
+              transition
             "
           >
             Open Vault

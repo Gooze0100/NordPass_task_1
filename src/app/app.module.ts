@@ -10,6 +10,9 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { FooterComponent } from './footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CdkAccordionModule } from '@angular/cdk/accordion';
+import { MatSelectModule } from '@angular/material/select';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,14 @@ import { CdkAccordionModule } from '@angular/cdk/accordion';
     ContactsComponent,
     FooterComponent,
   ],
-  imports: [BrowserModule, BrowserAnimationsModule, CdkAccordionModule],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    CdkAccordionModule,
+    MatSelectModule,
+    HttpClientModule,
+    FormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -1,0 +1,18 @@
+input.ng-touched,
+input.ng-dirty,
+textarea.ng-touched,
+textarea.ng-dirty {
+  border: 1px solid #f64f64;
+}
+
+input.ng-valid,
+input.ng-untouched,
+textarea.ng-valid,
+textarea.ng-untouched {
+  border: 1px solid #b9babd;
+}
+
+button[disabled] {
+  background-color: #43a5a283;
+  color: #fff;
+}
