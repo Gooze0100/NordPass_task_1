@@ -51,9 +51,8 @@ module.exports = {
       nordSelectR: "180px",
       nordFooter: "75px",
       nordInputL: "16px",
-      nordBaseX: "200px",
-      nordHero1Y: "120px",
-      nordHero2Y: "230px",
+      nordBaseX: "96px",
+      nordNavX: "393px",
     },
     lineHeight: {
       nordHeight: "64px",
@@ -76,6 +75,7 @@ module.exports = {
       nordSImg: "832px",
       nordInput: "455px",
       nordInfo: "406px",
+      nordForm: "320px",
     },
     height: {
       nordFImg: "485px",

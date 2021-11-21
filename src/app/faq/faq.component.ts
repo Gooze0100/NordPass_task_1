@@ -16,13 +16,17 @@ export class FAQComponent implements OnInit {
     },
     {
       heading: 'How to choose the best password manager for business?',
-      text1: '',
-      text2: '',
+      text1:
+        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem pariatur reprehenderit culpa voluptatum illo doloribus.',
+      text2:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, voluptatem!',
     },
     {
       heading: 'How can I get a business password manager?',
-      text1: '',
-      text2: '',
+      text1:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, voluptatem!',
+      text2:
+        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem pariatur reprehenderit culpa voluptatum illo doloribus.',
     },
   ];
 

@@ -1,1 +1,36 @@
+.fixed {
+  position: fixed;
+  width: 100%;
+  transition: 0.2s linear;
+  top: 0px;
+  left: 0;
+  right: 0;
+  padding-left: 250px;
+  padding-right: 250px;
 
+  @media screen and (max-width: 950px) {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+  @media screen and (max-width: 400px) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+.notFixed {
+  position: static;
+  transition: 0.2s linear;
+  top: -50px;
+  padding-left: 250px;
+  padding-right: 250px;
+
+  @media screen and (max-width: 950px) {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+
+  @media screen and (max-width: 400px) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}

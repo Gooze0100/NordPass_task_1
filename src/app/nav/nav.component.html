@@ -1,19 +1,9 @@
 <div
-  class="
-    container
-    md:px-nordBaseX
-    sm:px-nordSButtonX
-    py-nordInputL
-    bg-nordTeal-lightest
-    fixed
-    top-0
-    max-w-full
-    transition-all
-    navigation
-    sm:pl-nordInputL sm:left-0 sm:right-0
-  "
+  class="bg-nordTeal-lightest py-nordInputL"
+  (scroll)="onScroll()"
+  [ngClass]="navBarFixed ? 'fixed' : 'notFixed'"
 >
-  <div class="sm:flex justify-between items-center flex-wrap">
+  <div class="flex justify-between items-center flex-wrap container">
     <a href="https://nordpass.com/">
       <div class="flex items-center">
         <span>
