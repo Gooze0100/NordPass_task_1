@@ -1,32 +1,132 @@
-<div>
-  <h2>Get NordPass for business</h2>
-  <div>
-    <div>
+<div class="container py-nordFooter">
+  <h2
+    class="
+      font-bold
+      text-nordFHeading
+      leading-nordHeight
+      text-center
+      tracking-nordSpacing
+      text-nordGrey-darkest
+    "
+  >
+    Get NordPass for business
+  </h2>
+  <div class="flex mt-16 justify-around items-center">
+    <div class="">
       <img
+        class="h-auto"
         src="../../assets/img/np-form-image.png"
         alt="Image of open computer, opened NordPass application"
       />
     </div>
-    <form action="">
-      <div>Fill out your details, and we will get back to you shortly:</div>
-      <input type="text" placeholder="Name" />
-      <input type="text" placeholder="|Email" />
+    <form>
+      <div class="text-nordSmall leading-nordSelect text-nordGrey-darkest mb-4">
+        Fill out your details, and we will get back to you shortly:
+      </div>
       <div>
+        <input
+          type="text"
+          placeholder="Name"
+          class="
+            border
+            box-border
+            border-defaultBorderColor
+            rounded-nordSmall
+            mb-6
+            text-nordGrey-darkest
+            font-medium
+            text-nordSsmall
+            leading-nordInput
+            pl-nordInputL
+            w-nordInput
+            h-nordInput
+            transition
+            focus:outline-none focus:ring focus:border-blue-300
+          "
+        />
+      </div>
+      <div>
+        <input
+          type="text"
+          placeholder="Email"
+          class="
+            border
+            box-border
+            border-defaultBorderColor
+            rounded-nordSmall
+            mb-3
+            text-nordGrey-darkest
+            font-medium
+            text-nordSsmall
+            leading-nordInput
+            pl-nordInputL
+            w-nordInput
+            h-nordInput
+            transition
+            focus:outline-none focus:ring focus:border-blue-300
+          "
+        />
+      </div>
+      <div class="flex items-center mb-6 text-nordRed-base hidden">
         <span>
           <img
+            class="stroke-current text-nordRed-base"
             src="../../assets/img/warning.svg"
             alt="Exclamation point in triangle"
           />
-          <span>Email address cannot be empty</span>
         </span>
+        <span>Email address cannot be empty</span>
       </div>
-      <textarea name="" id="" cols="30" rows="10" placeholder="Note">
-      </textarea>
-      <div>
+      <textarea
+        name=""
+        id=""
+        placeholder="Note"
+        class="
+          border
+          box-border
+          border-defaultBorderColor
+          rounded-nordSmall
+          mb-3
+          text-nordGrey-darkest
+          font-medium
+          text-nordSsmall
+          leading-nordInput
+          pl-nordInputL
+          w-nordInput
+          h-nordTextArea
+          pt-nordSButtonY
+          transition
+          focus:outline-none focus:ring focus:border-blue-300
+        "
+      ></textarea>
+      <div
+        class="
+          text-nordBlack-lighter
+          font-medium
+          text-nordSmaller
+          leading-nordFooter
+          w-nordInfo
+          h-nordInfo
+        "
+      >
         This information will be used by NordPass to respond to your inquiry as
-        provided in our<a href="/">Privacy Policy</a>.
+        provided in our<a href="/" class="ml-1 underline">Privacy Policy</a>.
       </div>
-      <button>Get started</button>
+      <button
+        class="
+          bg-nordTeal-base
+          text-nordWhite-base
+          rounded-nordSmall
+          py-nordSButtonY
+          px-nordSButtonX
+          font-bold
+          text-center text-base
+          leading-nordLButton
+          mt-6
+        "
+      >
+        Get started
+      </button>
     </form>
   </div>
 </div>

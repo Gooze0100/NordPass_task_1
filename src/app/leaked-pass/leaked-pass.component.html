@@ -1,23 +1,92 @@
-<div>
-  <h3>Top leaked passwords</h3>
-
-  <table>
-    <tr>
-      <th>Password</th>
-      <th>
-        <select name="" id="sort">
-          <option value="">Count</option>
-        </select>
-      </th>
-    </tr>
-    <tr>
-      <td>
-        <ol>
-          <li>{{}}</li>
-        </ol>
-      </td>
-      <td>{{}}</td>
-    </tr>
-  </table>
-  <button>Show all (50)</button>
+<div class="container py-nordFooter px-nordBaseX">
+  <h3
+    class="
+      text-nordSHeading
+      font-bold
+      leading-nordSHeading
+      tracking-nordSHeading
+      text-center text-nordGrey-dark
+    "
+  >
+    Top leaked passwords
+  </h3>
+  <div class="mt-16">
+    <table class="block">
+      <tr class="flex justify-between w-screen">
+        <th class="text-base leading-nordSHeight text-nordGrey-dark">
+          Password
+        </th>
+        <th>
+          <select
+            name=""
+            id="sort"
+            class="
+              border
+              box-border
+              border-defaultBorderColor
+              rounded-nordSmall
+              py-nordSelectY
+              pl-nordSelectL
+              pr-nordSelectR
+              text-currentBackground
+              leading-nordSelect
+            "
+          >
+            <option value="">Count</option>
+          </select>
+        </th>
+      </tr>
+      <hr class="mt-6 text-nordGrey-light" />
+      <tr class="flex justify-between items-center my-5">
+        <td>
+          <span
+            class="
+              list-decimal list-inside
+              text-nordGrey-dark
+              leading-nordSelect
+              text-nordSmall
+            "
+            >1.</span
+          >
+          <span
+            class="
+              leading-nordTable
+              text-nordSmall
+              font-bold
+              ml-7
+              text-nordGrey-dark
+            "
+            >Random</span
+          >
+        </td>
+        <td
+          class="
+            text-nordSmall
+            leading-nordSelect
+            text-right text-nordGrey-darkest
+          "
+        >
+          Random
+        </td>
+      </tr>
+      <hr class="text-nordGrey-light" />
+    </table>
+  </div>
+  <div class="flex items-center justify-center">
+    <button
+      class="
+        bg-nordTeal-base
+        text-nordWhite-base
+        rounded-nordSmall
+        py-nordTButtonY
+        px-nordTButtonX
+        font-bold
+        text-center
+        mt-11
+        transition
+      "
+    >
+      Show all (50)
+    </button>
+  </div>
 </div>

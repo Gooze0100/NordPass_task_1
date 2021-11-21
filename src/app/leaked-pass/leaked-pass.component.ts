@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'leaked-pass',
+  selector: 'app-leaked-pass',
   templateUrl: './leaked-pass.component.html',
   styleUrls: ['./leaked-pass.component.scss'],
 })

@@ -8,6 +8,8 @@ import { LeakedPassComponent } from './leaked-pass/leaked-pass.component';
 import { FAQComponent } from './faq/faq.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { FooterComponent } from './footer/footer.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CdkAccordionModule } from '@angular/cdk/accordion';
 
 @NgModule({
   declarations: [
@@ -17,12 +19,10 @@ import { FooterComponent } from './footer/footer.component';
     LeakedPassComponent,
     FAQComponent,
     ContactsComponent,
-    FooterComponent
+    FooterComponent,
   ],
-  imports: [
-    BrowserModule
-  ],
+  imports: [BrowserModule, BrowserAnimationsModule, CdkAccordionModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
